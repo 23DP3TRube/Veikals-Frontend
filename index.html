@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV - Viss jūsu vajadzībai</title>
+    <link rel="stylesheet" href="src/css/main.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><h2>EV</h2></div>
+        <ul>
+            <li><a href="#hero">Sākums</a></li>
+            <li><a href="#download">Lejupielāde</a></li>
+            <li><a href="#features">Funkcijas</a></li>
+            <li><a href="#contact">Sazināties ar mums</a></li>
+        </ul>
+        <div class="lang-switch">
+            <button>LV</button>
+            <button>EN</button>
+            <button>RU</button>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <h1>Viss jūsu vajadzībai</h1>
+        <p>E-veikala mērķis ir atvieglot jūsu dzīves, atļaujot apmeklēt veikalu no jebkurienes</p>
+        <a id="download" href="src/programma.zip" class="download-btn">Lejupielādēt</a>
+    </section>
+
+    <section id="features" class="features">
+        <div class="feature-box">
+            <h2>Reģistrācija/ierakstīšanās</h2>
+            <p>Iespēja izveidot savu kontu, lai saglabātu savu pirkumu vēsturi un veiktos pirkumu informāciju.</p>
+            <div class="input-boxes">
+                <div class="input-group">
+                    <label for="username">Lietotājvārds</label>
+                    <input type="text" id="username" placeholder="Ievadiet lietotājvārdu">
+                </div>
+                <div class="input-group">
+                    <label for="password">Parole</label>
+                    <input type="password" id="password" placeholder="Ievadiet paroli">
+                </div>
+                <button class="login-btn">Pieteikties</button>
+            </div>
+            <div id="welcome-message" style="display: none;"></div>
+        </div>
+        <div class="feature-box">
+            <h2>Preces grozs</h2>
+            <p>Iespēja pievienot preces grozam un veikt pirkumu.</p>
+        </div>
+        <div class="feature-box">
+            <h2>Skatīt preces</h2>
+            <p>Var redzēt pieejamās preces un to informāciju.</p>
+        </div>
+        <div class="feature-box">
+            <h2>Pievienot naudu</h2>
+            <p>Iespēja papildināt savu kontu ar naudu, lai veiktu pirkumus.</p>
+        </div>
+        <div class="feature-box">
+            <h2>Samaksāt</h2>
+            <p>Veiciet maksājumus par izvēlētajām precēm droši un ātri.</p>
+        </div>
+        <div class="feature-box">
+            <h2>Izrakstīties</h2>
+            <p>Pabeidziet pirkumu un saņemiet apstiprinājumu par pasūtījumu.</p>
+        </div>
+        <div class="feature-box">
+            <h2>Novērtējumi</h2>
+            <p>Sniedziet atsauksmes un novērtējiet iegādātās preces.</p>
+            <form id="feedback-form">
+                <textarea placeholder="Ievadiet savu atsauksmi šeit..." required></textarea>
+                <label for="rating">Novērtējums:</label>
+                <select id="rating" required>
+                    <option value="" disabled selected>Izvēlieties novērtējumu</option>
+                    <option value="1">1 - huiņa</option>
+                    <option value="2">2 - sūds</option>
+                    <option value="3">3 - ok</option>
+                    <option value="4">4 - Decent</option>
+                    <option value="5">5 - Feini</option>
+                </select>
+                <button type="submit">Iesniegt</button>
+            </form>
+            <div id="feedback-message"></div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Sazināties ar mums</h2>
+        <p>Kontaktinformācija.</p>
+    </section>
+
+    <script src="/src/js/main.js"></script>
+</body>
+</html>
