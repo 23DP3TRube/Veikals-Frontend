@@ -7,89 +7,92 @@
     <link rel="stylesheet" href="src/css/main.css">
 </head>
 <body>
-    <nav>
+    <nav id="navbar">
         <div class="logo"><h2>EV</h2></div>
+        <button class="menu-toggle">☰</button>
         <ul>
-            <li><a href="#hero">Sākums</a></li>
-            <li><a href="#download">Lejupielāde</a></li>
-            <li><a href="#features">Funkcijas</a></li>
-            <li><a href="#contact">Sazināties ar mums</a></li>
+            <li><a href="#hero" data-key="nav_home">Sākums</a></li>
+            <li><a href="#download" data-key="nav_download">Lejupielāde</a></li>
+            <li><a href="#features" data-key="nav_features">Funkcijas</a></li>
+            <li><a href="#contact" data-key="nav_contact">Sazināties ar mums</a></li>
         </ul>
         <div class="lang-switch">
-            <button>LV</button>
-            <button>EN</button>
-            <button>RU</button>
+            <button data-lang="lv" class="active">LV</button>
+            <button data-lang="en">EN</button>
+            <button data-lang="ru">RU</button>
         </div>
     </nav>
 
     <section id="hero" class="hero">
-        <h1>Viss jūsu vajadzībai</h1>
-        <p>E-veikala mērķis ir atvieglot jūsu dzīves, atļaujot apmeklēt veikalu no jebkurienes</p>
-        <a id="download" href="src/programma.zip" class="download-btn">Lejupielādēt</a>
+        <h1 data-key="hero_title">Viss jūsu vajadzībai</h1>
+        <p data-key="hero_description">E-veikala mērķis ir atvieglot jūsu dzīves, atļaujot apmeklēt veikalu no jebkurienes</p>
+        <a id="download" href="src/programma.zip" class="download-btn" data-key="download_btn">Lejupielādēt</a>
     </section>
 
     <section id="features" class="features">
         <div class="feature-box">
-            <h2>Reģistrācija/ierakstīšanās</h2>
-            <p>Iespēja izveidot savu kontu, lai saglabātu savu pirkumu vēsturi un veiktos pirkumu informāciju.</p>
+            <h2 data-key="feature_registration">Reģistrācija/ierakstīšanās</h2>
+            <p data-key="feature_registration_desc">Iespēja izveidot savu kontu, lai saglabātu savu pirkumu vēsturi un veiktos pirkumu informāciju.</p>
             <div class="input-boxes">
                 <div class="input-group">
-                    <label for="username">Lietotājvārds</label>
+                    <label for="username" data-key="username_label">Lietotājvārds</label>
                     <input type="text" id="username" placeholder="Ievadiet lietotājvārdu">
                 </div>
                 <div class="input-group">
-                    <label for="password">Parole</label>
+                    <label for="password" data-key="password_label">Parole</label>
                     <input type="password" id="password" placeholder="Ievadiet paroli">
                 </div>
-                <button class="login-btn">Pieteikties</button>
+                <button class="login-btn" data-key="login_btn">Pieteikties</button>
             </div>
             <div id="welcome-message" style="display: none;"></div>
         </div>
         <div class="feature-box">
-            <h2>Preces grozs</h2>
-            <p>Iespēja pievienot preces grozam un veikt pirkumu.</p>
+            <h2 data-key="feature_cart">Preces grozs</h2>
+            <p data-key="feature_cart_desc">Iespēja pievienot preces grozam un veikt pirkumu.</p>
         </div>
         <div class="feature-box">
-            <h2>Skatīt preces</h2>
-            <p>Var redzēt pieejamās preces un to informāciju.</p>
+            <h2 data-key="feature_view">Skatīt preces</h2>
+            <p data-key="feature_view_desc">Var redzēt pieejamās preces un to informāciju.</p>
         </div>
         <div class="feature-box">
-            <h2>Pievienot naudu</h2>
-            <p>Iespēja papildināt savu kontu ar naudu, lai veiktu pirkumus.</p>
+            <h2 data-key="feature_add_money">Pievienot naudu</h2>
+            <p data-key="feature_add_money_desc">Iespēja papildināt savu kontu ar naudu, lai veiktu pirkumus.</p>
         </div>
         <div class="feature-box">
-            <h2>Samaksāt</h2>
-            <p>Veiciet maksājumus par izvēlētajām precēm droši un ātri.</p>
+            <h2 data-key="feature_pay">Samaksāt</h2>
+            <p data-key="feature_pay_desc">Veiciet maksājumus par izvēlētajām precēm droši un ātri.</p>
         </div>
         <div class="feature-box">
-            <h2>Izrakstīties</h2>
-            <p>Pabeidziet pirkumu un saņemiet apstiprinājumu par pasūtījumu.</p>
+            <h2 data-key="feature_checkout">Izrakstīties</h2>
+            <p data-key="feature_checkout_desc">Pabeidziet pirkumu un saņemiet apstiprinājumu par pasūtījumu.</p>
         </div>
         <div class="feature-box">
-            <h2>Novērtējumi</h2>
-            <p>Sniedziet atsauksmes un novērtējiet iegādātās preces.</p>
-            <form id="feedback-form">
-                <textarea placeholder="Ievadiet savu atsauksmi šeit..." required></textarea>
-                <label for="rating">Novērtējums:</label>
+            <h2 data-key="feature_feedback">Novērtējumi</h2>
+            <p data-key="feature_feedback_desc">Sniedziet atsauksmes un novērtējiet iegādātās preces.</p>
+            <div id="feedback-form">
+                <textarea placeholder="Ievadiet savu atsauksmi šeit..." required data-key="feedback_placeholder"></textarea>
+                <label for="rating" data-key="rating_label">Novērtējums:</label>
                 <select id="rating" required>
-                    <option value="" disabled selected>Izvēlieties novērtējumu</option>
-                    <option value="1">1 - huiņa</option>
-                    <option value="2">2 - sūds</option>
-                    <option value="3">3 - ok</option>
-                    <option value="4">4 - Decent</option>
-                    <option value="5">5 - Feini</option>
+                    <option value="" disabled selected data-key="rating_select">Izvēlieties novērtējumu</option>
+                    <option value="1" data-key="rating_1">1 - huiņa</option>
+                    <option value="2" data-key="rating_2">2 - sūds</option>
+                    <option value="3" data-key="rating_3">3 - ok</option>
+                    <option value="4" data-key="rating_4">4 - Decent</option>
+                    <option value="5" data-key="rating_5">5 - Feini</option>
                 </select>
-                <button type="submit">Iesniegt</button>
-            </form>
+                <button type="submit" data-key="submit_btn">Iesniegt</button>
+            </div>
             <div id="feedback-message"></div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Sazināties ar mums</h2>
-        <p>Kontaktinformācija.</p>
+    <section id="contact" class="footer">
+        <h2 data-key="footer_contact">Sazināties ar mums</h2>
+        <p data-key="footer_email">E-pasts: info@veikals.lv</p>
+        <p data-key="footer_phone">Telefons: +371 12345678</p>
+        <p data-key="footer_address">Adrese: Rīga, Latvija</p>
+        <a href="src/user-manual.pdf" download="User-Manual" class="download-btn" data-key="manual_btn">Lejupielādēt lietotāja rokasgrāmatu</a>
     </section>
-
-    <script src="/src/js/main.js"></script>
+    <script src="src/js/main.js"></script>
 </body>
 </html>
