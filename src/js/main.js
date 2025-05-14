@@ -82,12 +82,9 @@ function updateLanguage(lang) {
 }
 
 // Menu toggle functionality
-const menuToggle = document.querySelector('.menu-toggle');
-const navUl = document.querySelector('nav ul');
-
-menuToggle.addEventListener('click', () => {
-    navUl.classList.toggle('active');
-    menuToggle.textContent = navUl.classList.contains('active') ? '✕' : '☰';
+document.querySelector('.menu-toggle').addEventListener('click', () => {
+    const navMenu = document.querySelector('nav ul');
+    navMenu.classList.toggle('active');
 });
 
 // Language switcher functionality
@@ -144,7 +141,6 @@ document.querySelectorAll('nav ul li a').forEach(link => {
         document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
     });
 });
-
 
 // Change navbar background on scroll
 const navbar = document.getElementById('navbar');

@@ -8,25 +8,19 @@ body {
     padding-top: 60px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 }
 
-/* Navigation */
+/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 5%;
-    background: white;
-    color: black;
+    background: #333;
+    color: white;
     position: fixed;
     top: 0;
     left: 0;
-    width: 90%;
+    width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 6px black;
-}
-
-.logo h2 {
-    margin: 0;
-    font-size: 1.5rem;
 }
 
 nav ul {
@@ -38,23 +32,36 @@ nav ul {
     transition: all 0.3s ease;
 }
 
+nav ul.active {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: bold;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: gray;
+    color: #ffcc00;
 }
 
 .menu-toggle {
     display: none;
     background: none;
     border: none;
-    color: black;
+    color: white;
     font-size: 1.5rem;
     cursor: pointer;
 }
@@ -92,101 +99,62 @@ nav ul li a:hover {
     justify-content: center;
     padding: 20px;
     box-sizing: border-box;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 0 0 20px;
-    line-height: 1.2;
+    text-align: center;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 30px;
-    line-height: 1.5;
+    font-size: 1rem;
+    max-width: 90%;
+    margin: 0 auto 20px;
+    text-align: center;
 }
 
 .download-btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: gray;
-    color: white;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: black;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    margin: 10px;
 }
 
 .download-btn:hover {
-    background-color: #555;
+    background-color: #e6b800;
 }
 
 /* Features Section */
 .features {
-    background-color: white;
-    padding: 60px 5%;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 20px 5%;
 }
 
-/* Feature box styles */
 .feature-box {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    text-align: center;
     background: white;
     color: #333;
     padding: 15px;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px black;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.feature-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px black;
-}
-
-.feature-box h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: black;
-}
-
-.feature-box p {
-    font-size: 1rem;
-    color: grey;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-.feature-image {
-    width: 100%;
+.feature-box img {
+    width: 80%;
     max-width: 150px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-box:hover .feature-image {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.feature-image.left {
-    order: -1; /* Move image to the left */
-}
-
-.feature-image.right {
-    order: 1; /* Keep image on the right */
+    height: auto;
+    margin-bottom: 15px;
 }
 
 .input-boxes {
@@ -396,21 +364,34 @@ nav ul li a:hover {
 
 /* Footer */
 .footer {
-    background-color: black;
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 40px 5%;
+    padding: 20px 5%;
 }
 
 .footer h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .footer p {
     font-size: 1rem;
-    margin: 10px 0;
-    line-height: 1.5;
+    margin: 5px 0;
+}
+
+.footer .download-btn {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.footer .download-btn:hover {
+    background-color: #e6b800;
 }
 
 /* Responsive Design */
@@ -425,48 +406,20 @@ nav ul li a:hover {
 }
 
 @media (max-width: 768px) {
-    nav {
-        flex-wrap: wrap;
-        padding: 10px 5%;
-    }
-
-    .menu-toggle {
-        display: block;
-        order: 1;
-    }
-
-    .logo {
-        order: 2;
-        flex-grow: 1;
-        text-align: center;
-    }
-
-    .lang-switch {
-        order: 3;
-    }
-
-    nav ul {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        gap: 10px;
-        padding: 20px 0;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero p {
         font-size: 1rem;
     }
 
-    .download-btn {
-        padding: 10px 20px;
+    .features {
+        padding: 20px 5%;
+    }
+
+    .footer h2 {
+        font-size: 1.3rem;
     }
 }
 
@@ -476,11 +429,70 @@ nav ul li a:hover {
     }
 
     .footer h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     nav {
         width: 100%;
         padding: 10px 2%;
+    }
+}
+
+/* Media query for iPhone SE (375px width) */
+@media (max-width: 375px) {
+    /* Adjust navbar */
+    #navbar ul {
+        display: none; /* Hide menu items by default */
+    }
+    #navbar .menu-toggle {
+        display: block; /* Show menu toggle button */
+    }
+    #navbar ul.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust hero section */
+    .hero h1 {
+        font-size: 1.5rem; /* Smaller font size */
+        text-align: center;
+    }
+    .hero p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .hero .download-btn {
+        width: 100%; /* Full width button */
+        padding: 10px;
+    }
+
+    /* Adjust feature boxes */
+    .feature-box {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+    }
+    .feature-box img {
+        width: 100%; /* Make images responsive */
+        height: auto;
+    }
+
+    /* Adjust feedback form */
+    .feedback-form textarea {
+        width: 100%; /* Full width textarea */
+    }
+    .feedback-form .rating-group {
+        justify-content: center; /* Center stars */
+    }
+
+    /* Adjust footer */
+    .footer {
+        text-align: center;
+    }
+    .footer h2 {
+        font-size: 1.2rem;
+    }
+    .footer .download-btn {
+        width: 100%; /* Full width button */
     }
 }
