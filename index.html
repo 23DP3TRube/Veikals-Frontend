@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV - Viss jūsu vajadzībai</title>
+    <link rel="stylesheet" href="src/css/main.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo"><h2>EV</h2></div>
+        <button class="menu-toggle">☰</button>
+        <ul>
+            <li><a href="#hero" data-key="nav_home">Sākums</a></li>
+            <li><a href="#download" data-key="nav_download">Lejupielāde</a></li>
+            <li><a href="#features" data-key="nav_features">Funkcijas</a></li>
+            <li><a href="#contact" data-key="nav_contact">Sazināties ar mums</a></li>
+        </ul>
+        <div class="lang-switch">
+            <button data-lang="lv" class="active">LV</button>
+            <button data-lang="en">EN</button>
+            <button data-lang="ru">RU</button>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <h1 data-key="hero_title">Viss jūsu vajadzībai</h1>
+        <p data-key="hero_description">E-veikala mērķis ir atvieglot jūsu dzīves, atļaujot apmeklēt veikalu no jebkurienes</p>
+        <a id="download" href="src/programma.zip" class="download-btn" data-key="download_btn">Lejupielādēt</a>
+    </section>
+
+    <section id="features" class="features">
+        <div class="feature-box registration-box">
+            <h2 data-key="feature_registration">Reģistrācija/ierakstīšanās</h2>
+            <p data-key="feature_registration_desc">Izveidojiet kontu, lai saglabātu pirkumu vēsturi un pārvaldītu savus pasūtījumus.</p>
+            <form class="registration-form">
+                <div class="input-group">
+                    <label for="username" data-key="username_label">Lietotājvārds</label>
+                    <input type="text" id="username" placeholder="Ievadiet lietotājvārdu">
+                </div>
+                <div class="input-group">
+                    <label for="password" data-key="password_label">Parole</label>
+                    <input type="password" id="password" placeholder="Ievadiet paroli">
+                </div>
+                <button type="submit" class="login-btn" data-key="login_btn">Pieteikties</button>
+            </form>
+        </div>
+
+        <div class="feature-box">
+            <img src="src/img/cart.png" alt="Preces grozs" class="feature-image left">
+            <div>
+                <h2 data-key="feature_cart">Preces grozs</h2>
+                <p data-key="feature_cart_desc">Iespēja pievienot preces grozam un veikt pirkumu.</p>
+            </div>
+        </div>
+        <div class="feature-box">
+            <div>
+                <h2 data-key="feature_view">Skatīt preces</h2>
+                <p data-key="feature_view_desc">Var redzēt pieejamās preces un to informāciju.</p>
+            </div>
+            <img src="src/img/view.png" alt="Skatīt preces" class="feature-image right">
+        </div>
+        <div class="feature-box">
+            <img src="src/img/add-money.png" alt="Pievienot naudu" class="feature-image left">
+            <div>
+                <h2 data-key="feature_add_money">Pievienot naudu</h2>
+                <p data-key="feature_add_money_desc">Iespēja papildināt savu kontu ar naudu, lai veiktu pirkumus.</p>
+            </div>
+        </div>
+        <div class="feature-box">
+            <div>
+                <h2 data-key="feature_pay">Samaksāt</h2>
+                <p data-key="feature_pay_desc">Veiciet maksājumus par izvēlētajām precēm droši un ātri.</p>
+            </div>
+            <img src="src/img/pay.png" alt="Samaksāt" class="feature-image right">
+        </div>
+
+        <div class="feature-box feedback-box">
+            <h2 data-key="feature_feedback">Novērtējumi</h2>
+            <p data-key="feature_feedback_desc">Sniedziet atsauksmes un novērtējiet iegādātās preces.</p>
+            <form id="feedback-form" class="feedback-form">
+                <textarea placeholder="Ievadiet savu atsauksmi šeit..." required data-key="feedback_placeholder"></textarea>
+                <div class="rating-group">
+                    <label for="rating" data-key="rating_label">Novērtējums:</label>
+                    <div class="stars">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5" title="5 stars">★</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4" title="4 stars">★</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3" title="3 stars">★</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2" title="2 stars">★</label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1" title="1 star">★</label>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn" data-key="submit_btn">Iesniegt</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact" class="footer">
+        <h2 data-key="footer_contact">Sazināties ar mums</h2>
+        <p data-key="footer_email">E-pasts: info@veikals.lv</p>
+        <p data-key="footer_phone">Telefons: +371 12345678</p>
+        <p data-key="footer_address">Adrese: Rīga, Latvija</p>
+        <a href="src/user-manual.pdf" download="User-Manual" class="download-btn" data-key="manual_btn">Lejupielādēt lietotāja rokasgrāmatu</a>
+    </section>
+    <script src="src/js/main.js"></script>
+</body>
+</html>
