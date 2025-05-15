@@ -85,18 +85,20 @@ function updateLanguage(lang) {
 document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.querySelector('.menu-toggle');
     const navUl = document.querySelector('nav ul');
-    menuToggle.addEventListener('click', function () {
-        navUl.classList.toggle('active');
-    });
-
-    // Optional: Close menu when a nav link is clicked (for mobile UX)
-    navUl.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', function () {
-            if (window.innerWidth <= 600) {
-                navUl.classList.remove('active');
-            }
+    if (menuToggle && navUl) {
+        menuToggle.addEventListener('click', function () {
+            navUl.classList.toggle('active');
         });
-    });
+
+        // Close menu when a nav link is clicked (for mobile UX)
+        navUl.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function () {
+                if (window.innerWidth <= 600) {
+                    navUl.classList.remove('active');
+                }
+            });
+        });
+    }
 });
 
 // Language switcher functionality

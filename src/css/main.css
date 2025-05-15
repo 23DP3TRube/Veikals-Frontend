@@ -679,21 +679,67 @@ nav ul li a:hover {
     }
 
     nav ul {
-        display: none !important; /* Always hide by default on mobile */
+        display: none !important;
         position: absolute;
-        top: 50px;
+        top: 50px; /* Place menu just below the navbar */
         left: 0;
         width: 100vw;
+        min-width: 0;
         flex-direction: column;
-        background: #393939;
-        gap: 0;
+        background: #222;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         z-index: 999;
+        padding: 0;
+        margin: 0;
+        height: auto;
+        overflow-y: auto;
+        border-radius: 0;
     }
 
     nav ul.active {
-        display: flex !important; /* Show when active */
+        display: flex !important;
+        flex-direction: column;
         gap: 0;
+        padding: 0;
+        margin: 0;
+        height: auto;
+    }
+
+    nav ul li {
+        width: 100%;
+        background: #222;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid #333;
+        box-sizing: border-box;
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    nav ul li a {
+        width: 100%;
+        display: block;
+        padding: 0;
+        background: transparent;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: bold;
+        text-align: center;
+        border: none;
+        box-sizing: border-box;
+        line-height: 50px;
+        height: 50px;
+    }
+
+    nav ul li a:hover {
+        background: #333;
+        color: #ffcc00;
     }
 
     .menu-toggle {
@@ -708,11 +754,6 @@ nav ul li a:hover {
         color: white;
         font-size: 2rem;
         cursor: pointer;
-    }
-
-    nav .lang-switch {
-        margin-left: 10px;
-        margin-right: 0;
     }
 
     #navbar .menu-toggle {
