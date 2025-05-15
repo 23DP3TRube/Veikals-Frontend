@@ -8,16 +8,16 @@
 </head>
 <body>
     <nav id="navbar">
-        <div class="logo"><h2>EV</h2></div>
-        <button class="menu-toggle">☰</button>
+        <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+        <div class="logo">EV</div>
         <ul>
             <li><a href="#hero" data-key="nav_home">Sākums</a></li>
-            <li><a href="#download" data-key="nav_download">Lejupielāde</a></li>
+            <li><a href="#download-guide" data-key="nav_download">Lejupielāde</a></li>
             <li><a href="#features" data-key="nav_features">Funkcijas</a></li>
             <li><a href="#contact" data-key="nav_contact">Sazināties ar mums</a></li>
         </ul>
         <div class="lang-switch">
-            <button data-lang="lv" class="active">LV</button>
+            <button data-lang="lv">LV</button>
             <button data-lang="en">EN</button>
             <button data-lang="ru">RU</button>
         </div>
@@ -27,6 +27,37 @@
         <h1 data-key="hero_title">Viss jūsu vajadzībai</h1>
         <p data-key="hero_description">E-veikala mērķis ir atvieglot jūsu dzīves, atļaujot apmeklēt veikalu no jebkurienes</p>
         <a id="download" href="src/programma.zip" class="download-btn" data-key="download_btn">Lejupielādēt</a>
+        <!-- GitHub repo button -->
+
+    </section>
+
+    <section id="download-guide" class="download-guide">
+        <h2>Lejupielādes ceļvedis Windows datoriem</h2>
+        <p>Izmantojiet visas mūsu lietotnes iespējas savā Windows datorā – pārvaldiet pirkumus un pasūtījumus ērtāk!</p>
+        <ol>
+            <li>
+                <strong>Lejupielādējiet lietotni</strong><br>
+                Noklikšķiniet uz lejupielādes pogas, lai iegūtu jaunāko versiju.
+            </li>
+            <li>
+                <strong>Atarhivējiet lietotni</strong><br>
+                Izsaiņojiet lejupielādēto ZIP failu izvēlētā mapē.
+            </li>
+            <li>
+                <strong>Palaidiet un izmantojiet</strong><br>
+                Sāciet lietot mūsu veikala programmu savām vajadzībām!
+            </li>
+        </ol>
+        <a href="src/programma.zip" class="download-btn" style="margin-bottom:10px;">Lejupielādēt tagad (v0.0.0.1, 64-bit)</a>
+        <!-- GitHub repo button below the download button -->
+        <a href="https://github.com/23DP3TRube/veikals-master-main" class="download-btn" target="_blank" style="margin-bottom:10px;">Skatīt GitHub</a>
+        <div class="system-requirements">
+            <h3>Sistēmas prasības</h3>
+            <ul>
+                <li>✓ Kaut vai kartupelis un nedaudz elektrības</li>
+                <li>✓ Windows</li>
+            </ul>
+        </div>
     </section>
 
     <section id="features" class="features">
@@ -105,7 +136,7 @@
         <p data-key="footer_email">E-pasts: info@veikals.lv</p>
         <p data-key="footer_phone">Telefons: +371 12345678</p>
         <p data-key="footer_address">Adrese: Rīga, Latvija</p>
-        <a href="src/user-manual.pdf" download="User-Manual" class="download-btn" data-key="manual_btn">Lejupielādēt lietotāja rokasgrāmatu</a>
+        <a href="/src/usermanual.txt" download="User-Manual" class="download-btn" data-key="manual_btn">Lejupielādēt lietotāja rokasgrāmatu</a>
     </section>
     <script src="src/js/main.js"></script>
 </body>

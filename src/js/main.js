@@ -82,9 +82,21 @@ function updateLanguage(lang) {
 }
 
 // Menu toggle functionality
-document.querySelector('.menu-toggle').addEventListener('click', () => {
-    const navMenu = document.querySelector('nav ul');
-    navMenu.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navUl = document.querySelector('nav ul');
+    menuToggle.addEventListener('click', function () {
+        navUl.classList.toggle('active');
+    });
+
+    // Optional: Close menu when a nav link is clicked (for mobile UX)
+    navUl.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function () {
+            if (window.innerWidth <= 600) {
+                navUl.classList.remove('active');
+            }
+        });
+    });
 });
 
 // Language switcher functionality
@@ -136,9 +148,15 @@ feedbackForm.addEventListener('submit', (e) => {
 // Smooth scrolling for navigation links
 document.querySelectorAll('nav ul li a').forEach(link => {
     link.addEventListener('click', e => {
-        e.preventDefault();
-        const targetId = e.target.getAttribute('href').substring(1);
-        document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#') && href.length > 1) {
+            e.preventDefault();
+            const targetId = href.substring(1);
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
     });
 });
 
